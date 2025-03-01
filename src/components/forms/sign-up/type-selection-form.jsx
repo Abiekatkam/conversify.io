@@ -9,7 +9,7 @@ const TypeSelectionForm = ({ register, userType, setUserType }) => {
   const { setCurrentStep } = useAuthContextHook();
   return (
     <>
-      <h2 className="text-lg font-semibold text-neutral-700">
+      <h2 className="text-lg font-semibold text-neutral-700 dark:text-neutral-300">
         Create an account
       </h2>
       <p className="-my-1 text-sm text-neutral-500 font-medium">
@@ -47,9 +47,9 @@ const TypeSelectionForm = ({ register, userType, setUserType }) => {
         >
           Continue
         </Button>
-        <p className="text-sm">
+        <p className="text-sm dark:text-neutral-500">
           Already have an account?{" "}
-          <Link href={"/auth/sign-in"} className="font-bold">
+          <Link href={"/auth/sign-in"} className="font-bold dark:text-neutral-100">
             Sign In
           </Link>
         </p>

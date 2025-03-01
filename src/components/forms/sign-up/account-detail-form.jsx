@@ -31,7 +31,7 @@ const AccountsDetailForm = ({ errors, register }) => {
 
   return (
     <>
-      <h2 className="text-lg font-semibold text-neutral-700">
+      <h2 className="text-lg font-semibold text-neutral-700 dark:text-neutral-300">
         Account Details
       </h2>
       {USER_REGISTRATION_FORM.map((field) => (
@@ -61,9 +61,9 @@ const AccountsDetailForm = ({ errors, register }) => {
         >
           Create an account
         </Button>
-        <p className="text-sm">
+        <p className="text-sm dark:text-neutral-500">
           Already have an account?{" "}
-          <Link href={"/auth/sign-in"} className="font-bold">
+          <Link href={"/auth/sign-in"} className="font-bold dark:text-neutral-100">
             Sign In
           </Link>
         </p>

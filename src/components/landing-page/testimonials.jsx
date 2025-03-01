@@ -42,27 +42,27 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <div className="w-full max-w-6xl h-[800px] flex items-center justify-center flex-col min-h-[400px]">
+    <div className="w-full max-w-6xl h-fit py-24 flex items-center justify-center flex-col">
       <div className="max-w-[920px] w-full flex flex-col items-center justify-center">
         <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-2xl md:text-4xl font-sans py-2 md:py-4 relative z-20 font-bold tracking-tight md:max-w-[550px] m-auto text-pretty">
           Trusted by Thousands of Businesses Worldwide
         </h2>
-        <div className="flex flex-row items-center justify-center gap-3 mt-1 w-full">
-          <div className="w-[33.33%] h-[190px] flex flex-col items-center justify-center p-6 rounded-2xl border-2 bg-neutral-50">
-            <h1 className="text-6xl font-black text-neutral-500">5000+</h1>
-            <p className="text-lg text-neutral-400 text-pretty text-center capitalize">
+        <div className="flex sm:flex-row flex-wrap flex-col items-center justify-center gap-3 mt-1 w-full px-8">
+          <div className="sm:w-[33%] w-full h-[190px] flex flex-col items-center justify-center p-6 rounded-2xl border-2 bg-neutral-50 dark:bg-neutral-800">
+            <h1 className="text-6xl font-black text-neutral-500 dark:text-neutral-200">5000+</h1>
+            <p className="text-lg text-neutral-400 text-pretty text-center capitalize dark:text-neutral-500">
               businesses using Conversify
             </p>
           </div>
-          <div className="w-[33.33%] h-[190px] flex flex-col items-center justify-center p-6 rounded-2xl border-2 bg-neutral-50">
-            <h1 className="text-6xl font-black text-neutral-500">1M+</h1>
-            <p className="text-lg text-neutral-400 text-pretty text-center capitalize">
+          <div className="sm:w-[33%] w-full h-[190px] flex flex-col items-center justify-center p-6 rounded-2xl border-2 bg-neutral-50 dark:bg-neutral-800">
+            <h1 className="text-6xl font-black text-neutral-500 dark:text-neutral-200">1M+</h1>
+            <p className="text-lg text-neutral-400 text-pretty text-center capitalize dark:text-neutral-500">
               automated conversations processed
             </p>
           </div>
-          <div className="w-[33.33%] h-[190px] flex flex-col items-center justify-center p-6 rounded-2xl border-2 bg-neutral-50">
-            <h1 className="text-6xl font-black text-neutral-500">98%</h1>
-            <p className="text-lg text-neutral-400 text-pretty text-center capitalize">
+          <div className="sm:w-[33%] w-full h-[190px] flex flex-col items-center justify-center p-6 rounded-2xl border-2 bg-neutral-50 dark:bg-neutral-800">
+            <h1 className="text-6xl font-black text-neutral-500 dark:text-neutral-200">98%</h1>
+            <p className="text-lg text-neutral-400 text-pretty text-center capitalize dark:text-neutral-500">
               customer satisfaction rate
             </p>
           </div>

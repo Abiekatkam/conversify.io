@@ -81,7 +81,7 @@ const TermsOfServivceLinks = [
 const Footer = () => {
   return (
     <div className="w-full mt-4 relative flex flex-col items-center bg-black text-white">
-      <div className="max-w-7xl py-12 px-10 w-full flex flex-row items-start justify-between">
+      <div className="max-w-7xl py-12 px-10 w-full flex sm:flex-row flex-col items-start justify-between">
         <div className="flex flex-col items-start group">
           <span className="w-[50px] h-[50px] transition-all ease-in-out duration-300 group-hover:rotate-90">
             {ConversifyWhiteLogo}
@@ -93,7 +93,7 @@ const Footer = () => {
             Made with love by Abhishek Katkam ❤️
           </p>
         </div>
-        <div className="w-fit flex items-start gap-4">
+        <div className="w-fit flex items-start gap-4 sm:m-0 mt-10">
           <div className="w-[190px] flex flex-col items-start">
             <h4 className="text-md font-semibold capitalize text-neutral-400 mb-2">
               Follow up on

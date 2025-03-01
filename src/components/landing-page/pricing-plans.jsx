@@ -39,12 +39,12 @@ const PricingPlans = () => {
   };
 
   return (
-    <div className="w-full max-w-7xl h-[800px] flex items-center justify-center flex-col min-h-[400px]">
+    <div className="w-full max-w-7xl h-fit py-24 flex items-center justify-center flex-col">
       <div className="max-w-[720px] w-full flex flex-col ite justify-center">
-        <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-2xl md:text-4xl font-sans py-2 md:py-4 relative z-20 font-bold tracking-tight md:max-w-[550px] m-auto">
+      <h2 className="bg-clip-text text-transparent text-center bg-gradient-to-b from-neutral-900 to-neutral-700 dark:from-neutral-600 dark:to-white text-2xl md:text-4xl font-sans py-2 md:py-4 relative z-20 font-bold tracking-tight md:max-w-[550px] m-auto text-pretty">
           Flexible & Scalable Pricing for Every Business
         </h2>
-        <p className="text-center text-lg md:text-xl font-medium text-neutral-500 dark:text-neutral-400 px-4 text-pretty">
+        <p className="text-center text-md sm:text-lg md:text-xl font-medium text-neutral-500 dark:text-neutral-400 px-4 text-pretty">
           Choose a plan that fits your needs—whether you're just starting out or
           scaling to the next level. Get started for free and upgrade as you
           grow!
@@ -72,47 +72,56 @@ const PricingPlans = () => {
           </span>
         </div>
       </div>
-      <div className="w-full flex items-center justify-center flex-wrap gap-5 mt-5">
+      <div className="w-full flex md:flex-row items-center justify-center flex-wrap gap-5 mt-5">
         {Plans.map((plannings) => (
           <div
             key={plannings.name}
             className={cn(
-              "flex flex-col items-start w-[25%] p-4 border-2 h-[350px] bg-neutral-100 rounded-xl shadow-md",
-              plannings.highlighted && "border-neutral-800"
+              "flex flex-col items-start sm:w-[25%] w-full sm:mx-0 mx-8 p-4 border-2 sm:h-[350px] h-[400px] bg-neutral-100 dark:bg-neutral-800 rounded-xl shadow-md",
+              plannings.highlighted &&
+                "border-neutral-800 dark:border-neutral-200"
             )}
           >
-            <div className="flex w-full justify-between items-center">
-              <h1 className="text-lg font-semibold text-neutral-700">
-                {plannings.name} Plan
-              </h1>
+            <div className="flex w-full justify-between items-start">
+              <div>
+                <h1 className="text-lg font-semibold text-neutral-700 dark:text-neutral-100">
+                  {plannings.name} Plan{" "}
+                </h1>
+                <span className="text-sm mt-0 dark:text-neutral-500 text-neutral-600">
+                  Billed {isYearly ? "annually" : "monthly"}
+                </span>
+              </div>
               {plannings.highlighted && (
-                <Badge className="bg-neutral-800">Most popular</Badge>
+                <Badge className="bg-neutral-800 dark:bg-neutral-50">
+                  Most popular
+                </Badge>
               )}
             </div>
             <div className="flex items-end">
-              <p className="text-5xl font-extrabold text-neutral-600">
+              <p className="text-6xl font-extrabold text-neutral-600 dark:text-neutral-100">
                 $
                 {isYearly
                   ? calculateYearlyPrice(plannings.monthlyPrice)
                   : plannings.monthlyPrice}
               </p>
-              <span className="text-neutral-600 font-medium">
+              <span className="text-neutral-600 font-medium dark:text-neutral-400">
                 / {!isYearly ? "month" : "year"}
               </span>
             </div>
             <div className="flex flex-col items-start gap-2 mt-6">
               {plannings.features.map((feature) => (
-                <div
-                  key={plannings.features[feature]}
-                  className="flex items-center gap-2"
-                >
+                <div key={feature} className="flex items-center gap-2">
                   <FaRegCircleCheck size={18} className="text-green-700" />
-                  <span className="text-md text-neutral-600">{feature}</span>
+                  <span className="text-md text-neutral-600 dark:text-neutral-400">
+                    {feature}
+                  </span>
                 </div>
               ))}
             </div>
             <Link href={`/dashboard/settings`} className="w-full mt-auto">
-              <Button className="w-full bg-neutral-800">Get Started</Button>
+              <Button className="w-full bg-neutral-800 dark:bg-neutral-200">
+                Get Started
+              </Button>
             </Link>
           </div>
         ))}

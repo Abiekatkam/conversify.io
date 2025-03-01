@@ -1,27 +1,18 @@
-"use client";
-import { ConversifyLogo, ConversifyWhiteLogo } from "@/constants/Icons";
 import Link from "next/link";
 import { Button } from "../ui/button";
-import { useTheme } from "next-themes";
+import React from "react";
+import ThemeLogo from "../common/theme-logo";
 
 const NavigationBar = () => {
-  const { theme } = useTheme();
   return (
-    <div className="relative z-10 w-full md:max-w-7xl p-3 px-10 mt-2 flex items-center justify-between">
+    <div className="relative z-10 w-full md:max-w-7xl p-3 sm:px-10 px-4 mt-2 flex items-center justify-between">
       <Link
         href={"/"}
         className="flex flex-row items-center justify-center gap-1 group"
+        suppressHydrationWarning
       >
-        {theme == "dark" ? (
-          <span className="w-[30px] h-[30px] transition-all ease-in-out duration-300 group-hover:rotate-90">
-            {ConversifyWhiteLogo}
-          </span>
-        ) : (
-          <span className="w-[30px] h-[30px] transition-all ease-in-out duration-300 group-hover:rotate-90">
-            {ConversifyLogo}
-          </span>
-        )}
-        <h5 className="text-2xl md:text-2xl font-bold text-neutral-700 dark:text-neutral-300">
+        <ThemeLogo width={"30px"} height={"30px"} />
+        <h5 className="text-lg sm:text-2xl font-bold text-neutral-700 dark:text-neutral-300">
           Conversify.io
         </h5>
       </Link>

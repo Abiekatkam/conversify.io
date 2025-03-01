@@ -5,7 +5,7 @@ import React from "react";
 
 const SignInPage = () => {
   return (
-    <div className="py-36 md:py-4 w-full">
+    <div className="flex-1 sm:py-4 w-full">
       <div className="flex flex-col gap-3">
         <SignInFormProvider>
           <div className="flex flex-col gap-3">

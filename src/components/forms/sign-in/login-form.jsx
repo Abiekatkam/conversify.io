@@ -23,7 +23,7 @@ const LoginForm = () => {
   const isValid = validateUserInput(userLoginData, UserLoginSchema);
   return (
     <>
-      <h2 className="text-lg font-semibold text-neutral-700">
+      <h2 className="text-lg font-semibold text-neutral-700 dark:text-neutral-300">
         Account Details
       </h2>
       {USER_LOGIN_FORM.map((field) => (
@@ -44,9 +44,9 @@ const LoginForm = () => {
         >
           Submit
         </Button>
-        <p className="text-sm">
+        <p className="text-sm dark:text-neutral-500 text-neutral-600">
           Don&rsquo;t have an account?{" "}
-          <Link href={"/auth/sign-up"} className="font-bold">
+          <Link href={"/auth/sign-up"} className="font-bold dark:text-neutral-300 text-neutral-900">
             Sign up
           </Link>
         </p>

@@ -2,13 +2,17 @@ import React from "react";
 
 const KeyFeatureCard = ({ index, title, description }) => {
   return (
-    <div className="w-[480px] flex relative">
-      <span className="text-9xl font-sans tracking-tighter font-black text-neutral-300">
+    <div className="md:w-[430px] sm:w-[330px] flex relative">
+      <span className="sm:text-[10rem] text-9xl  leading-none absolute -left-6 font-sans tracking-tighter font-black text-neutral-300 dark:text-neutral-700">
         {index}
       </span>
-      <div className="flex flex-col items-start absolute top-0 left-12 p-4">
-        <h1 className="text-lg font-extrabold text-neutral-700">{title}</h1>
-        <p className="text-neutral-500 dark:text-neutral-400">{description}</p>
+      <div className="relative z-10 flex flex-col items-start p-4 pl-8 md:pl-12 ">
+        <h1 className="text-lg font-extrabold text-neutral-700 dark:text-neutral-200">
+          {title}
+        </h1>
+        <p className="text-sm sm:text-md md:text-xl font-medium text-neutral-500 dark:text-neutral-400 text-pretty">
+          {description}
+        </p>
       </div>
     </div>
   );

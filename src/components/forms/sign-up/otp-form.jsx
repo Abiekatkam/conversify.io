@@ -20,9 +20,9 @@ const OTPForm = ({ onOtp, setOtp }) => {
         <Button type="submit" className="w-full">
           Create an account
         </Button>
-        <p className="text-sm">
+        <p className="text-sm dark:text-neutral-500">
           Already have an account?{" "}
-          <Link href={"/auth/sign-in"} className="font-bold">
+          <Link href={"/auth/sign-in"} className="font-bold dark:text-neutral-100">
             Sign In
           </Link>
         </p>
